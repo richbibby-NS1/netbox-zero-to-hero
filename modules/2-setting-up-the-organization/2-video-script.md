@@ -116,31 +116,33 @@ OK, so now click Locations and then the upload button for the bulk import of the
 
 **netbox_locatons.csv**
 
-Then click submit. And that's now imported 11 locations successfully, so click on Locations to get the nice table view again of all the locations.
+Then click submit. And that's now imported 11 locations successfully, so click on Locations to view all the locations.
 
 ### Racks and Rack Roles
-Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least 1 rack where Network/IT equipment is installed.
+Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least 1 rack where Network or IT equipment is installed.
 
 Users can also create custom roles to which racks can be assigned, and our company has defined their rack roles as Infrastructure, Compute and Storage.
 
-So first of all, to create the Rack Roles, click the plus sign next to Rack Roles and the first one to add is 'Infrastructure', leave the color as grey and add a description of 'Mixed IT Infrastructure', the click create+add another. Next to add is the 'Compute' role select Amber, this doesn't need a description as the clue is in the name. Then add the last role type of 'Storage', go with Brown and click create. (then click rack roles)
+So first of all, to create the Rack Roles, expand Racks and click the plus sign next to Rack Roles and the first one to add is 'Infrastructure', leave the color as grey and add a description of 'Mixed IT Infrastructure', the click create+add another. Next to add is the 'Compute' role select Amber, this doesn't need a description as the clue is in the name. Then add the last role type of 'Storage', go with Brown and click create. (then click rack roles)
 
-OK so the new Comms Room location at the Brisbane site has a single rack that is used for mixed IT infrastructure - so click the 'infrastucture' rack role and then click 'add rack. The region is Brisbane, the site group is 'branch', then select the site and the location is the 'comms room', give it the name of 'AUBRI01-RK-01', status is 'planned' again, the role is already set to 'infrastructure'. The tenant group is 'Departments', and the tenant is 'Consulting'
+OK so the new Comms Room location at the Brisbane site has a single rack that is used for mixed IT infrastructure - so click the 'infrastucture' rack role and then click 'add rack. The region is Brisbane, the site group is 'branch', then select the site and the location is the 'comms room', give it the name of 'AUBRI01-RK-01', status is 'planned' again, the role is already set to 'infrastructure'.
 
-Now at this is branch office site the requirement is only for a half height rack, so select 4 post cabinet, 19 inch width, and 22 rack units in height. optionally you could set the outer dimensions also here if required, then click create. So there is the new rack for Brisbane all set up.
+Note that you can pre-define your rack types, which makes things easier if you are deploying lots of similar racks of the same types, but in this demo we will skip that. The tenant group is 'Departments', and the tenant is 'Consulting'
 
-Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,type,width,u_height:
+Now at this is branch office site the requirement is only for a half height rack, so for the form factor select 4 post cabinet, 19 inch width, and 22 rack units in height. optionally you could set the outer dimensions also here if required, then click create. So there is the new rack for Brisbane all set up.
+
+Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,form_factor,width,u_height:
 
 **netbox_racks.csv**
 
 Note here that the London and Chicago sites each have 2 locations - the Comms Room and the on premises data center - and the data center racks are full height 42 rack units and there is a mixture of roles - infrastructure, Compute and storage.
 
-so once again, click on submit and NetBox successfully imported all of the racks! (click view all)
+So once again, click on submit and NetBox successfully imported all of the racks! (click racks)
 
 ### Contacts
 To complete the organizational set up Susan is going to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship that a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects.
 
-So to start off TLE consulting has 2 contact groups - IT and facilities management. So from contact groups, click add and then the first one is IT, with a description of IT Staff, the 2nd one is Facilities Management, with a description of 'Facilities Management Staff'
+So to start off, our company has 2 contact groups - IT and facilities management. So from Organization and contact groups, click add and then the first one is IT, with a description of IT Staff, the 2nd one is Facilities Management, with a description of 'Facilities Management Staff'
 
 Next add the contact roles, again clicking add. the first role to add is Operations, and then the next role will be Emergency.
 
@@ -150,10 +152,10 @@ Then do the same for Eric who is also in the IT group, and works with Susan as a
 
 OK the last contact to add is Alexa who works in the Facilities Management team and is the Facilities Manager there. so complete her contact details as usual(555-765-4321 and alexa@example.com). OK so then click contacts to view the list.
 
-Now contacts are assigned to objects and most core objects in NetBox can have contacts assigned to them. and the way that TLE Consulting has chosen to assign them is at the Site Group level. So go to Site Groups, and then click the Branch site group and then once in the object click on add a contact.
+Now contacts are assigned to objects and most core objects in NetBox can have contacts assigned to them. and the way that we will assign them is at the Site Group level. So go to Site Groups, and then click the Branch site group, then click Contacts and then click on add a contact.
 
 From the group, select the IT Group, then Susan as the contact, select operations for the contact role, and then set Susan to be the primary contact. then add another and this time select Eric and make him the secondary contact. Lastly add another this time select facilities management, and then Alexa as the contact, giving her the role of Emergency contact. and then click on create.
 
-Then when the Branch Site Group object is displayed, it now shows the contacts that have been assigned to it. The point here is that there is a lot of flexibility when it comes to assigning contacts, but the design is that you create the contact only once and then assigned it to as many objects as required, in a manner that suits your own organization.
+SO we can now see the contacts that have been assigned to our Branch Site Group. The point here is that there is a lot of flexibility when it comes to assigning contacts, but the design is that you create the contact only once and then assigned it to as many objects as required, in a manner that suits your own organization.
 
 So, I hope that has been a useful overview of how to model an organization within NetBox, and hopefully you had fun following along on your own NetBox instance! Thanks for watching.

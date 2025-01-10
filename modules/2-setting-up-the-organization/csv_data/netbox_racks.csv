@@ -1,18 +1,18 @@
-site,location,name,tenant,status,role,type,width,u_height
-NZAKL01,Comms Room,NZAKL01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
-MYKUL01,Comms Room,MYKUL01-RK-01,Marketing,active,Infrastructure,4-post-cabinet,19,22
-AUSYD01,Comms Room,AUSYD01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
-AUMEL01,Comms Room,AUMEL01-RK-1,Consulting,active,Infrastructure,4-post-cabinet,19,22
-CAMON01,Comms Room,CAMON01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
-USDEN01,Comms Room,USDEN01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
-USLAX01,Comms Room,USLAX01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
-UKLON01,Comms Room,UKLON01-RK-01,Finance,active,Infrastructure,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-04,IT,active,Compute,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-05,IT,active,Storage,4-post-cabinet,19,42
-USCHG01,Comms Room,USCHG01-RK-01,IT,active,Infrastructure,4-post-cabinet,19,22
-USCHG01,Data Center,USCHG01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
-USCHG01,Data Center,USCHG01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
-USCHG01,Data Center,USCHG01-RK-04,IT,active,Compute,4-post-cabinet,19,42
-USCHG01,Data Center,USCHG01-RK-05,IT,active,Storage,4-post-cabinet,19,42
+site,location,name,tenant,status,role,form_factor,width,u_height
+Auckland,Comms Room,NZAKL01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
+Kuala Lumpur,Comms Room,MYKUL01-RK-01,Marketing,active,Infrastructure,4-post-cabinet,19,22
+Sydney,Comms Room,AUSYD01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
+Melbourne,Comms Room,AUMEL01-RK-1,Consulting,active,Infrastructure,4-post-cabinet,19,22
+Montreal,Comms Room,CAMON01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
+Denver,Comms Room,USDEN01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
+Los Angeles,Comms Room,USLAX01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
+London,Comms Room,UKLON01-RK-01,Finance,active,Infrastructure,4-post-cabinet,19,42
+London,Data Center,UKLON01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
+London,Data Center,UKLON01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
+London,Data Center,UKLON01-RK-04,IT,active,Compute,4-post-cabinet,19,42
+London,Data Center,UKLON01-RK-05,IT,active,Storage,4-post-cabinet,19,42
+Chicago,Comms Room,USCHG01-RK-01,IT,active,Infrastructure,4-post-cabinet,19,22
+Chicago,Data Center,USCHG01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
+Chicago,Data Center,USCHG01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
+Chicago,Data Center,USCHG01-RK-04,IT,active,Compute,4-post-cabinet,19,42
+Chicago,Data Center,USCHG01-RK-05,IT,active,Storage,4-post-cabinet,19,42
