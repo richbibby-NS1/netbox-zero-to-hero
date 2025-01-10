@@ -1,11 +1,11 @@
 name,slug,status,region,group,tenant
-ZAJNB01,zajnb01,active,Johannesburg,Branch,Consulting
-NZAKL01,nzakl01,active,Auckland,Branch,Sales
-MYKUL01,mykul01,active,Kuala Lumpur,Branch,Marketing
-AUSYD01,ausyd1,active,Sydney,Branch,Consulting
-AUMEL01,aumel1,active,Melbourne,Branch,Consulting
-CAMON01,camon1,active,Montreal,Branch,Consulting
-USDEN01,usden1,active,Denver,Branch,Consulting
-USLAX01,uslax01,active,Los Angeles,Branch,Sales
-UKLON01,uklon01,active,London,Corporate,Finance
-USCHG01,uschg01,active,Chicago,Corporate,IT
+Johannesburg,johannesburg,active,Johannesburg,Branch,Consulting
+Auckland,auckland,active,Auckland,Branch,Sales
+Kuala Lumpur,kuala_lumpur,active,Kuala Lumpur,Branch,Marketing
+Sydney,sydney,active,Sydney,Branch,Consulting
+Melbourne,melbourne,active,Melbourne,Branch,Consulting
+Montreal,montreal,active,Montreal,Branch,Consulting
+Denver,denver,active,Denver,Branch,Consulting
+Los Angeles,los_angeles,active,Los Angeles,Branch,Sales
+London,london,active,London,Corporate,Finance
+Chicago,chicago,active,Chicago,Corporate,IT

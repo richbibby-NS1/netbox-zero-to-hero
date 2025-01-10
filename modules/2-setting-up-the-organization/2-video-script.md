@@ -1,11 +1,11 @@
-Hello and welcome to this video for module 2 of the NetBox Zero to Hero training course. If you haven't already checked out the first module yet then you can find the link in the notes below to get started. For this demo I am using a NetBox Cloud instance. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you get set up with your own instance of NetBox along with a link to the notes that accompany this video module.
+Hello and welcome to this video for module 2 of the NetBox Zero to Hero training course. If you haven't already checked out the first module yet then you can find the link in the notes below to get started. For this demo I am using a NetBox Cloud instance, and if if you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you get set up with your own instance of NetBox along with a link to the notes that accompany this video module.
 
 In this video we will be laying the foundations of the NetBox data for our fictional organization. This organizational data is critical and according to NetBox best practice should be added at the start - as everything else is built on top of it.
 
 ### NetBox System Users
-OK, so I am logged into NetBox as the admin user and as you can see I have a completely empty database. The very first thing to do is set up the Network Engineers Eric and Susan as users on the system, as they are going to be the 2 main users for now.
+OK, so I am logged into NetBox as the admin user and as you can see I have a completely empty database. The very first thing to do is set up the Network Engineers Eric and Susan as users on the system, as they are going to be the 2 main users for now. One thing to note is that if you are following along using the netbox cloud free plan then the method for adding users is slightly different as you invite them to join your organization as administrators via the netbox cloud admin console. For this video though I will show you how to add them through the NetBox Web UI.
 
-By setting up separate user accounts for them it is easy to track what changes each user is making to the database. To do this, go to Admin, Users and click add, then enter the username of Susan and a password - then select staff and superuser status which means Susan can access the admin functions and has all permissions to the NetBox database objects. Scroll further down and you can see that explicit permissions can be set and this is the way you can be more granular with user permissions - for example you could restrict a user or a group to only have read-only access to Device data - this could be helpful in a scenario where you have junior IT support staff who might need to check what devices are at a certain location, but you don't want them to make any changes.
+By setting up separate user accounts for them it is easy to track what changes each user is making to the database. To do this, go to Admin, Users and click add, then enter the username of Susan and a password - then select staff and superuser status which means Susan can access the both the NetBox Admin functions and has all permissions to the NetBox database. Scroll further down and you can see that explicit permissions can be set and this is the way you can be more granular with user permissions - for example you could restrict a user or a group to only have read-only access to Device data - this could be helpful in a scenario where you have junior IT support staff who might need to check what devices are at a certain location, but you don't want them to make any changes.
 
 For now though, just click 'Create and add another' down at the bottom, and add Eric now with the same permissions as Susan. OK now that's done, so log out as the admin account and now log back in as Susan. Great, so we can stay logged in as Susan to do the rest of the work for this module.
 
@@ -27,11 +27,11 @@ Next, set up the regions and as you know from the course notes the company is pr
 
 From Regions Susan could click add here (click on add to show the interface) just like we did for tenants, but as she needs to add quite a few regions it makes sense to bulk import them to save time.
 
-To do this, simply click on regions and then click on the import icon in the top right - and here there is an option to either paste in the data in comma separated values format, or upload the data as a CSV file. Note the CSV options section at the bottom tells indicates which fields are required as a minimum for the data to be accepted.
+To do this, simply click on regions and then click on the import icon in the top right - and here there is an option to either paste in the data in either CSV, JSON or YMAL format, or upload the data as a file. Note the Field options section at the bottom indicates which fields are required as a minimum for the data to be accepted, and in this case it's name and slug.
 
-In this case it's name and slug, and these are already pre-populated. Now within their Regions, our example company has nested regions for example the City of Los Angeles, is a sub-region of the State of California, which is in the United States - and the USA's parent region is North America.
+Now within their Regions, our example company has nested regions for example the City of Los Angeles, is a sub-region of the State of California, which is in the United States - and the USA's parent region is North America.
 
-I'm sure you get the picture - so use the 'parent' field here too (add 'parent' header) when adding the sub-regions.
+I'm sure you get the picture - so we'll use the 'parent' field here too (add 'parent' header) when adding the sub-regions.
 
 So to start, add the top level regions, by pasting in the names and slugs:
 
@@ -72,9 +72,9 @@ Denver,denver,Colorado
 Los Angeles,los-angeles,California
 Chicago,chicago,Illinois
 
-OK note here that Brisbane included as a region - and this will be the geographical location of the the new site that Eric and Susan are going to be deploying.
+OK note here that Brisbane is included as a region - and this will be the geographical location of the the new site that Eric and Susan are going to be deploying.
 
-Ok great, so click on 'Submit' and there are all of the regions created using the bulk upload method. click 'view all' to see how the regions are nested - for example Johannesburg, sits under South Africa, which comes under the Africa parent regions.
+Ok great, so click on 'Submit' and there are all of the regions created using the bulk upload method. You can see how the regions are nested - for example Johannesburg, sits under South Africa, which comes under the Africa parent region.
 
 ### Site Groups and Sites
 
@@ -88,7 +88,7 @@ OK, so now the Site Groups are set up (click on org-site groups) go ahead and ma
 
 So the name is 'Brisbane', and leave the default value for the slug. As this site is not active yet, set the status to 'planned'. From the drop down, select 'asia pacific - australia - brisbane'.
 
-This is a branch site so there's no need for a provider or facility. similarly there is no ASN for this site, so skip that. Set the time zone to be 'australia/brisbane' and add a description of 'New branch site'
+This is a branch site so there's no need for a provider or facility. similarly there is no ASN for this site, so skip that. Set the time zone to be 'australia/brisbane' and add a description of 'Brisbane Branch Site'
 
 There are no tags set up yet so skip that, but do select the 'Departments' tenant group and then the 'consulting' department as the tenant.
 
@@ -100,23 +100,23 @@ Next, add in the address and co-ordinates:
 
 And then just go ahead and click create, down at the bottom here. And that's it! The new Brisbane site is set up.
 
-OK so as you know our fictional company has a number of other sites around the world so make use of the bulk upload feature again to save some time. This time go to Sites and click the upload link and here is the form to submit CSV data again. For these sites add the name, slug, status, region, group and tenant:
+OK so as you know our fictional company has a number of other sites around the world so make use of the bulk upload feature again to save some time. This time go to Sites and click the upload link and here is the form to submit the data again. So we'll use CSV format again and for these sites add the name, slug, status, region, group and tenant fields
 
 **netbox_sites.csv**
 
-So just paste them in and this time set the status of them to be active, click submit and that's the import completed, so now click on 'View All' and here is the full list of sites including the planned new site in Brisbane.
+So just paste them in and this time set the status of them to be active, click submit and that's the import completed. Then click on sites and here is the full list of sites including the planned new site in Brisbane.
 
 ### Locations
 
-So now the sites are set up, the next step is to add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or a room. All Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites the comms room plus an additional location within them (the on premises data center).
+So now the sites are set up, the next step is to add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or a room. All Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites have the comms room plus an additional location within them (the on premises data center).
 
-So once again Susan can manually add the the location in the new Brisbane site, and use the bulk upload for the other sites from CSV data. So from locations click 'add' and then select the region as Brisbane, the site group is Branch, the site is AUBRI01, the name is Comms Room, status is 'planned', pop in a description of 'Main IT Suite'. then lastly the tenant group is Departments and the tenant at this location is the Consulting department. OK, so go ahead and click create on that, and there is the new location all set up.
+So once again Susan can manually add the the location in the new Brisbane site, and use the bulk upload for the other sites from CSV data. So from locations click 'add' and then select the site as Brisbane, the name is Comms Room, status is 'planned', pop in a description of 'Main IT Suite'. then lastly the tenant group is Departments and the tenant at this location is the Consulting department. OK, so go ahead and click create on that, and there is the new location all set up.
 
 OK, so now click Locations and then the upload button for the bulk import of the rest of the locations. we'll set the headers to site, name, slug, status, tenant, and description, and paste in the rest of data. Notice how for the London and Chicago sites there are 2 locations - the 2nd one being the on-premises data center.
 
 **netbox_locatons.csv**
 
-Then click submit. And that's now imported 11 locations successfully, so click on 'View all' to get the nice table view again of all the locations.
+Then click submit. And that's now imported 11 locations successfully, so click on Locations to get the nice table view again of all the locations.
 
 ### Racks and Rack Roles
 Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least 1 rack where Network/IT equipment is installed.

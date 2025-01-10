@@ -1,12 +1,12 @@
 site,name,slug,status,tenant,description
-NZAKL01,Comms Room,comms-room,active,Sales,Main IT Suite
-MYKUL01,Comms Room,comms-room,active,Marketing,Main IT Suite
-AUSYD01,Comms Room,comms-room,active,Consulting,Main IT Suite
-AUMEL01,Comms Room,comms-room,active,Consulting,Main IT Suite
-CAMON01,Comms Room,comms-room,active,Consulting,Main IT Suite
-USDEN01,Comms Room,comms-room,active,Consulting,Main IT Suite
-USLAX01,Comms Room,comms-room,active,Sales,Main IT Suite
-UKLON01,Comms Room,comms-room,active,Finance,3rd Floor IT Suite
-UKLON01,Data Center,data-center,active,IT,On Premises Data Center
-USCHG01,Comms Room,comms-room,active,IT,10th Floor IT Suite
-USCHG01,Data Center,data-center,active,IT,On Premises Data Center
+Auckland,Comms Room,comms-room,active,Sales,Main IT Suite
+Kuala Lumpur,Comms Room,comms-room,active,Marketing,Main IT Suite
+Sydney,Comms Room,comms-room,active,Consulting,Main IT Suite
+Melbourne,Comms Room,comms-room,active,Consulting,Main IT Suite
+Montreal,Comms Room,comms-room,active,Consulting,Main IT Suite
+Denver,Comms Room,comms-room,active,Consulting,Main IT Suite
+Los Angeles,Comms Room,comms-room,active,Sales,Main IT Suite
+London,Comms Room,comms-room,active,Finance,3rd Floor IT Suite
+London,Data Center,data-center,active,IT,On Premises Data Center
+Chicago,Comms Room,comms-room,active,IT,10th Floor IT Suite
+Chicago,Data Center,data-center,active,IT,On Premises Data Center
