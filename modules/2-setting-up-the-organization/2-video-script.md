@@ -118,26 +118,33 @@ OK, so now click Locations and then the upload button for the bulk import of the
 
 Then click submit. And that's now imported 11 locations successfully, so click on Locations to view all the locations.
 
-### Racks and Rack Roles
+### Racks, Rack Types and Rack Roles
 Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least 1 rack where Network or IT equipment is installed.
 
-Users can also create custom roles to which racks can be assigned, and our company has defined their rack roles as Infrastructure, Compute and Storage.
+You can create re-useable rack types, and our company has standardized on a half height rack for smaller deployments and a full height rack for larger sites. You can also define rack roles to which racks can be assigned, and our company has defined their rack roles as Infrastructure, Compute and Storage.
 
-So first of all, to create the Rack Roles, expand Racks and click the plus sign next to Rack Roles and the first one to add is 'Infrastructure', leave the color as grey and add a description of 'Mixed IT Infrastructure', the click create+add another. Next to add is the 'Compute' role select Amber, this doesn't need a description as the clue is in the name. Then add the last role type of 'Storage', go with Brown and click create. (then click rack roles)
+So first of all to create the rack types, if I click on Racks and Rack Types we can see the warning that "Before you can add a rack type you must first create a manufacturer." so let's do that click add. so our first rack manufacturer is HPE so I'll add that, and then add another for Vertiv, and click Create.
 
-OK so the new Comms Room location at the Brisbane site has a single rack that is used for mixed IT infrastructure - so click the 'infrastucture' rack role and then click 'add rack. The region is Brisbane, the site group is 'branch', then select the site and the location is the 'comms room', give it the name of 'AUBRI01-RK-01', status is 'planned' again, the role is already set to 'infrastructure'.
+Great so now we can import the rack types a csv data. so under rack types I'll click on import and then paste in the data from the csv file. (you will find all the data we are importing in csv files in the Github repository that accompanies this course).
 
-Note that you can pre-define your rack types, which makes things easier if you are deploying lots of similar racks of the same types, but in this demo we will skip that. The tenant group is 'Departments', and the tenant is 'Consulting'
+So from this data you can see we have 2 rack types, one from Vertiv that is 24 RU in height for smaller deployments such as Brisbane, and a full height rack from HPE use for for larger deployments. I'll click submit and then you can see our two new rack types are available for us to use.
 
-Now at this is branch office site the requirement is only for a half height rack, so for the form factor select 4 post cabinet, 19 inch width, and 22 rack units in height. optionally you could set the outer dimensions also here if required, then click create. So there is the new rack for Brisbane all set up.
+Next, to create the Rack Roles, expand Racks and click the plus sign next to Rack Roles and the first one to add is 'Infrastructure', leave the color as grey and add a description of 'Mixed IT Infrastructure', the click create+add another. Next to add is the 'Compute' role select Amber, this doesn't need a description as the clue is in the name. Then add the last role type of 'Storage', go with Brown and click create. (then click rack roles)
 
-Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,form_factor,width,u_height:
+OK so the new Comms Room location at the Brisbane site has a single rack that is used for mixed IT infrastructure - so click the 'infrastucture' rack role and then click 'add rack. The site is Brisbane, the location is the 'comms room', give it the name of 'AUBRI01-RK-01', status is 'planned' again, the role is already set to 'infrastructure'.
+
+Now at this is branch office site the requirement is only for a half height rack so we will will select that for the rack type, the tenant group is 'Departments', and the tenant is 'Consulting', then click create. So there is the new rack for Brisbane all set up.
+
+**NEEDS 4.1.8**
+Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,rack_type??:
 
 **netbox_racks.csv**
 
 Note here that the London and Chicago sites each have 2 locations - the Comms Room and the on premises data center - and the data center racks are full height 42 rack units and there is a mixture of roles - infrastructure, Compute and storage.
 
 So once again, click on submit and NetBox successfully imported all of the racks! (click racks)
+
+**NEEDS 4.1.8**
 
 ### Contacts
 To complete the organizational set up Susan is going to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship that a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects.

@@ -1,7 +1,7 @@
 # Module 2 - Setting Up The Organization
 # Introduction
 
-Hello and welcome to module 2 of the NetBox 'Zero-to-Hero' course. In [Module 1: Introduction](../1-Introduction/1-introduction.md) you learned the features of NetBox, and had a guided tour of both the Web Interface and the REST API. In this module we will expand on this by adding the Organizational data for our fictional consulting firm, into NetBox.
+Hello and welcome to module 2 of the NetBox 'Zero-to-Hero' course. In [Module 1: Introduction](../1-Introduction/1-introduction.md) you learned the features of NetBox, and had a guided tour of both the Web Interface and the REST API. In this module we will expand on this by adding the Organizational data for our fictional consulting firm into NetBox.
 
 By the end of this module you will be able to:
 - Describe how NetBox models the organization using tenant groups, tenants, regions, site groups, sites, locations, racks and contacts
@@ -15,7 +15,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
-The NetBox version used in the video for this module is `v4.1.6`.
+The NetBox version used in the video for this module is `v4.1.7`.
 
 ## The Organizational Data
 Our fictional organization is structured as follows:
@@ -37,10 +37,10 @@ Whereas regions are intended for geographic organization, site groups may be use
 ### Locations
 A location can be any logical subdivision within a building, such as a floor or room. All the Branch sites have a single location (Comms Room) and the Corporate sites have an extra location within them (On-Premises Data Center)
 
-### Racks, Rack Roles and Rack Types
+### Racks, Rack Types and Rack Roles
 Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least one rack where Network/IT equipment is installed.
 
-A rack type defines the physical characteristics of a particular model of rack, and users can also create custom roles to which racks can be assigned, and in our example they have defined their rack roles as Infrastructure, Compute and Storage.
+Rack Types define the physical characteristics of a particular manufacturer's model of rack and you can create these to match your preferred rack types. Users can also create custom roles to which racks can be assigned. In our example we will create a couple of rack types and define rack roles for Infrastructure, Compute and Storage.
 
 ### Contacts
 To complete the organizational set up we will need to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects.
