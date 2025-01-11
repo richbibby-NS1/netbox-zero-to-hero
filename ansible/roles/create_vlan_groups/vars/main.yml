@@ -3,4 +3,4 @@ vlan_groups:
 
   - name: Brisbane_VLANS
     scope_type: dcim.site
-    scope: AUBRI01
+    scope: Brisbane

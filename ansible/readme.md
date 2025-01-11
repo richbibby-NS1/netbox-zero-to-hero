@@ -8,10 +8,10 @@ git clone https://github.com/netbox-community/netbox-zero-to-hero.git
 cd netbox-zero-to-hero/ansible
 ```
 
-2. Create a new Python Virtual Environment and activate it: 
+2. Create a new Python Virtual Environment and activate it:
 ```
-python3 -m venv .
-source bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), Ansible and the NetBox modules for Ansible using Ansible Collections:
 ```

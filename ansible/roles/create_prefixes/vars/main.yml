@@ -5,7 +5,7 @@ prefixes:
     status: reserved
     description: Data
     prefix_length: 25
-    site: AUBRI01
+    site: Brisbane
     tenant: Consulting
     vlan: DATA
 
@@ -13,7 +13,7 @@ prefixes:
     status: reserved
     description: Voice
     prefix_length: 25
-    site: AUBRI01
+    site: Brisbane
     tenant: Consulting
     vlan: VOICE
 
@@ -21,7 +21,7 @@ prefixes:
     status: reserved
     description: Branch Wifi
     prefix_length: 25
-    site: AUBRI01
+    site: Brisbane
     tenant: Consulting
     vlan: B_WIFI
 
@@ -29,7 +29,7 @@ prefixes:
     status: reserved
     description: Guest Wifi
     prefix_length: 25
-    site: AUBRI01
+    site: Brisbane
     tenant: Consulting
     vlan: G_WIFI
 
@@ -37,14 +37,14 @@ prefixes:
     status: reserved
     description: Network Management
     prefix_length: 26
-    site: AUBRI01
+    site: Brisbane
     tenant: Consulting
     vlan: NETMAN
-    
+
   - parent: 192.168.0.0/22
     status: reserved
     description: P2P RTR-SW
     prefix_length: 30
-    site: AUBRI01
+    site: Brisbane
     tenant: Consulting
     vlan: P2P
