@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "64aeb6fc-db20-4da4-87ca-548ee451afa1",
+		"_postman_id": "927cfa6f-4b73-43fb-be04-338372a22539",
 		"name": "NetBox - Zero to Hero",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21687002"
+		"_exporter_id": "24723367"
 	},
 	"item": [
 		{
@@ -152,7 +152,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"AUBRI01-RTR-1\",\n        \"device_type\": 1,\n        \"role\": 1,\n        \"tenant\": 5,\n        \"platform\": 1,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 20.0,\n        \"face\": \"front\",\n        \"status\": \"planned\",\n        \"airflow\": \"front-to-rear\"\n    },\n    {\n        \"name\": \"AUBRI01-SW-1\",\n        \"device_type\": 2,\n        \"role\": 2,\n        \"tenant\": 5,\n        \"platform\": 2,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 21.0,\n        \"face\": \"front\",\n        \"status\": \"planned\",\n        \"airflow\": \"front-to-rear\"\n    },\n    {\n        \"name\": \"AUBRI01-PAN-1\",\n        \"device_type\": 5,\n        \"role\": 4,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 22.0,\n        \"face\": \"front\",\n        \"status\": \"planned\"\n    },\n    {\n        \"name\": \"AUBRI01-CON-1\",\n        \"device_type\": 4,\n        \"role\": 5,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 19.0,\n        \"face\": \"front\",\n        \"status\": \"planned\"\n    },   \n    {\n        \"name\": \"AUBRI01-AP-1\",\n        \"device_type\": 3,\n        \"role\": 3,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"status\": \"planned\"\n    },\n    {\n        \"name\": \"AUBRI01-AP-2\",\n        \"device_type\": 3,\n        \"role\": 3,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"status\": \"planned\"\n    }   \n]",
+							"raw": "[\n    {\n        \"name\": \"AUBRI01-RTR-1\",\n        \"device_type\": 1,\n        \"role\": 1,\n        \"tenant\": 5,\n        \"platform\": 1,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 22.0,\n        \"face\": \"front\",\n        \"status\": \"planned\",\n        \"airflow\": \"front-to-rear\"\n    },\n    {\n        \"name\": \"AUBRI01-SW-1\",\n        \"device_type\": 2,\n        \"role\": 2,\n        \"tenant\": 5,\n        \"platform\": 2,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 23.0,\n        \"face\": \"front\",\n        \"status\": \"planned\",\n        \"airflow\": \"front-to-rear\"\n    },\n    {\n        \"name\": \"AUBRI01-PAN-1\",\n        \"device_type\": 5,\n        \"role\": 4,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 24.0,\n        \"face\": \"front\",\n        \"status\": \"planned\"\n    },\n    {\n        \"name\": \"AUBRI01-CON-1\",\n        \"device_type\": 4,\n        \"role\": 5,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 21.0,\n        \"face\": \"front\",\n        \"status\": \"planned\"\n    },   \n    {\n        \"name\": \"AUBRI01-AP-1\",\n        \"device_type\": 3,\n        \"role\": 3,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"status\": \"planned\"\n    },\n    {\n        \"name\": \"AUBRI01-AP-2\",\n        \"device_type\": 3,\n        \"role\": 3,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"status\": \"planned\"\n    }   \n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -398,7 +398,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"Cisco IOS\",\n        \"slug\": \"cisco-ios\",\n        \"manufacturer\": {\n            \"name\": \"Cisco\"\n        },\n        \"napalm_driver\": \"ios\"\n    },\n    {\n        \"name\": \"Juniper JunOS\",\n        \"slug\": \"juniper-junos\",\n        \"manufacturer\": {\n            \"name\": \"Juniper\"\n        },\n        \"napalm_driver\": \"junos\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"Cisco IOS\",\n        \"slug\": \"cisco-ios\",\n        \"manufacturer\": {\n            \"name\": \"Cisco\"\n        }\n    },\n    {\n        \"name\": \"Juniper JunOS\",\n        \"slug\": \"juniper-junos\",\n        \"manufacturer\": {\n            \"name\": \"Juniper\"\n        }\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -817,14 +817,13 @@
 							"raw": "[\n    {\n        \"name\": \"Telstra\",\n        \"slug\": \"telstra\",\n        \"account\": \"TELAC6789\",\n        \"portal_url\": \"http://www.madeupportal.com\",\n        \"noc_contact\": \"email: help@madeupportal.com\",\n        \"admin_contact\": \"email:admin@madeupportal.com\"\n    } \n]"
 						},
 						"url": {
-							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/providers/",
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/providers/",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{netboxURL}}"
 							],
 							"port": "{{port}}",
 							"path": [
-								"",
 								"api",
 								"circuits",
 								"providers",
@@ -855,14 +854,13 @@
 							"raw": "[\n    {\n        \"name\": \"Internet Access\",\n        \"slug\": \"internet-access\",\n        \"description\": \"Direct Internet Access Circuit\"\n    } \n]"
 						},
 						"url": {
-							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/circuit-types/",
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/circuit-types/",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{netboxURL}}"
 							],
 							"port": "{{port}}",
 							"path": [
-								"",
 								"api",
 								"circuits",
 								"circuit-types",
@@ -893,14 +891,13 @@
 							"raw": "[\n    {\n        \"cid\": \"TelCir12345\",\n        \"provider\": 1,\n        \"type\": 1,\n        \"status\": \"active\",\n        \"tenant\": 3, \n        \"commit_rate\": 200000\n    } \n]"
 						},
 						"url": {
-							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/circuits/",
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/circuits/",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{netboxURL}}"
 							],
 							"port": "{{port}}",
 							"path": [
-								"",
 								"api",
 								"circuits",
 								"circuits",
@@ -931,14 +928,13 @@
 							"raw": "[\n    {\n    \"circuit\": {\n        \"cid\": \"TelCir12345\"\n    },\n    \"term_side\": \"Z\",\n    \"site\": {\n        \"name\": \"AUBRI01\"\n    },\n    \"port_speed\": 200000\n    }\n]"
 						},
 						"url": {
-							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/circuit-terminations/",
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/circuit-terminations/",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{netboxURL}}"
 							],
 							"port": "{{port}}",
 							"path": [
-								"",
 								"api",
 								"circuits",
 								"circuit-terminations",

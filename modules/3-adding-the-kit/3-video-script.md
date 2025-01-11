@@ -20,7 +20,7 @@ So in the list are the names and slugs for Cisco, Cisco Meraki, Juniper, Panduit
 
 OK, Click send, and the response is a 201 - so that's great, and we can see the response contains a list of the newly created manufacturer instances. Note also, the value in the ID field - each object has a numerical value for ID to identify it in the NetBox database. Remember if you are following along, your object ID's will most likely be different to the one's in this demo video.
 
-Great - so switch back to the UI and - and there is the list of manufacturers. so click on Cisco for example and once again note the ID is referenced in the top right corner of the page. (click back on manufacturers)
+Great - so switch back to the UI and - and there is the list of manufacturers. Note that we also have HPE and Vertiv already in the list as we added these manually in module 2 for our racks. So click on Cisco for example and once again note the ID is referenced in the top right corner of the page. (click back on manufacturers)
 
 ### Device Roles
 So next Eric needs to add the Device Roles - so back in the postman collection there is an API call for this which is again a post request, this time to the dcim/device-roles api end point. This time in the body of the request we have a list of json objects representing each role starting with the WAN Router.
@@ -29,7 +29,7 @@ Again there is the name and slug, plus a hexadecimal value for a colour for the 
 
 So the other roles are access switch, wireless access point, patch panel and console server. Once again click send to make the call, and we have another successful request with a 201 response message back from the NetBox server, and the response contains a list of the newly created device role instances.
 
-Now tou could switch back to check this in the Web interface, but instead why not make use of another API call do this - there is a GET request on the collection that makes a call to the device roles API end point once again.
+Now you could switch back to check this in the Web interface, but instead why not make use of another API call do this - there is a GET request on the collection that makes a call to the device roles API end point once again.
 
 Note that this request making use of the 'brief' format by appending ?brief=1 onto the end of the request.
 
@@ -55,7 +55,7 @@ So you can find links to copies of the yaml files for the device types needed fo
 
 If we look at the Meraki MR56 access point definition - this one even has a link to the datasheet in the comments.
 
-so to add these into NetBox you import them via the Web interface. so go to device types and click import - paste in the yaml formatted data for the the ISR4321 router. then click submit + import another. Next do the same for the Juniper EX4300 switch........then the Cisco Meraki MR56 access point........followed by the Avocent console server.......and lastly the Panduit 48 port patch panel - (click submit).
+so to add these into NetBox you import them via the Web interface. so go to device types and click import - paste in the yaml formatted data for the the ISR4321 router. then click submit. Next do the same for the Juniper EX4300 switch........then the Cisco Meraki MR56 access point........followed by the Avocent console server.......and lastly the Panduit 48 port patch panel - (click submit).
 
 Great - so click Device types now and here is the full list - click the Cisco ISR4321 for example and you can see the main device type and the component templates for the interfaces.....the console ports and the power ports.
 
@@ -68,11 +68,11 @@ Check the MR56 AP and in the comments there is the link to the datasheet. Awesom
 ### Devices
 Now it's time to add the devices as instances of the device types you just added, so flip back over to postman to do this via the REST API. The request type once again is POST and the API endpoint is dcim/devices, and as usual there is a list of json objects for each device.
 
-So, the first device in the list is the WAN router, and the name is AUBRI01-RTR-1 so that's easy enough, but notice there are some fields like device type for example that have the numeric ID of the device type being instantiated - the question is how do you know what that ID value is? well you could find it in the web interface as we have seen, but we could also make an API call to get the same value.
+So, the first device in the list is the WAN router, and the name is AUBRI01-RTR-1 so that's easy enough, but notice there are some fields like device type for example that have the numeric ID of the device type being instantiated - so the question is how do you know what that ID value is? well you could find it in the web interface as we have seen, but we could also make an API call to get the same value.
 
 For example if you run the 'get device types' request you could return a list of them all like this (with ?brief=1), or you could filter the results to only return the data you need - for example to filter for the ISR4321 router model you could append '?model__ic=ISR' to the end of the request - hit send and there is the result containing the ID value of 6.
 
-using the 'double underscore ic' lookup expression filters string fields (you can find much more on this in the NetBox documentation (show http://localhost:8000/static/docs/reference/filtering/) in this case it the 'double underscore ic' filter matches when a string contains the text, and is not case sensitive.
+using the 'double underscore ic' lookup expression filters string fields (you can find much more on this in the NetBox documentation (show https://netboxlabs.com/docs/netbox/en/stable/reference/filtering/) in this case the 'double underscore ic' filter matches when a string contains the text, and is not case sensitive.
 
 So you can add filters in this way to find all of the other ID values required to add the devices For example to find the ID of the location you want to install a device into - you could use the 'get locations' request and filter on a status of planned - and that will return only the new Brisbane location.
 
@@ -84,5 +84,4 @@ So, Click send, and the response is a 201 - so that's great, and the response co
 
 Great stuff - now flip back to the web interface, and click devices and there is a list of the newly added devices! click into one of them (AUBRI01-SW-1) and notice how all the components are there, and you can click on the link to the rack elevation and then you can see it's location in the rack also - and you can see the space utilization of the rack now too with all the devices installed in it.
 
-### API Reference Docs
 So, I hope that has been a useful overview of how to add devices into NetBox using the REST API and Postman, and hopefully you had fun following along on your own NetBox instance! Thanks for watching.
