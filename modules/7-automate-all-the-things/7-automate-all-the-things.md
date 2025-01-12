@@ -163,7 +163,7 @@ The data that will be pulled from NetBox to inject into the templates when they 
 ## Video - Automating Device Configurations with NetBox and Ansible
 OK, so with all that said - let's get to the fun stuff!! This video will step you through the whole process from setting up NetBox as the source for the Ansible Inventory through to generating the finished configuration files.
 
-If you are following along you can find the [Ansible playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) in the course Git Repository and you can use these as a starting point for building your collection of playbooks for NetBox.
+If you are following along you can find the [Ansible playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) in the course GitHub repository and you can use these as a starting point for building your collection of playbooks for NetBox.
 
 [![Automating device configurations with Netbox and Ansible](https://img.youtube.com/vi/aHx9EpCvi2U/maxresdefault.jpg)](https://www.youtube.com/watch?v=aHx9EpCvi2U)
 

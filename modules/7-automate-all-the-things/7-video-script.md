@@ -6,7 +6,7 @@ In this video our network engineer Eric, will use Ansible to extract data from N
 
 To do this Eric will set up Ansible to use NetBox as the source for it's Dynamic Inventory. He'll run Ansible playbooks to make calls to NetBox REST API end points to extract the required data for the device configurations, and then use Ansible again to automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables.
 
-Once again you will find links to all of the resource used in the Git repository that accompanies this course, and you can find a link to it in the notes below.
+Once again you will find links to all of the resource used in the GitHub repository that accompanies this course, and you can find a link to it in the notes below.
 
 Eric has already followed the set up instructions for Ansible, has activated a new new virtual environment, and has set his environment variables up for the API URL and the API TOKEN. please do check the instructions in the course notes if you need help with this initial set up of Ansible.
 

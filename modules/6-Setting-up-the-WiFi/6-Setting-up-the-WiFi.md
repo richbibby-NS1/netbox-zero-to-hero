@@ -11,7 +11,7 @@ By the end of this module you will be able to:
 ## Why Use Python Scripts With NetBox?
 If you have been through the previous modules of this course you will know that it's easy to add data manually via the Web Interface, but when you are dealing with a lot of data that manual process can quickly become both tedious and error prone. Using simple python scripts has the advantages of saving you time and reducing errors.
 
-Getting started with Python is super easy and a lot of fun too! The [scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) included in the Git repository for this course will get you up and running quickly and within a few minutes you can be interacting with the NetBox database programmatically via the REST API.
+Getting started with Python is super easy and a lot of fun too! The [scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) included in the GitHub repository for this course will get you up and running quickly and within a few minutes you can be interacting with the NetBox database programmatically via the REST API.
 
 Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical for managing modern networks, so by adding some basic Python coding skills to your armory, you will set yourself up for long term career success!
 
@@ -23,7 +23,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are:
-- `NetBox v4.1.6`
+- `NetBox v4.1.8`
 - `Python v3.12.5`
 
 ## Setting Up Your Python Environment
@@ -43,7 +43,7 @@ Susan has planned the following Wireless LANs for the new Brisbane site, and thi
 ## Video - Adding Wireless LANs to NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Wireless LAN data, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along you can find the [python scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) in the course Git Repository and you can use these as a starting point for building your collection of Python scripts for NetBox.
+If you are following along you can find the [python scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) in the course GitHub repository and you can use these as a starting point for building your collection of Python scripts for NetBox.
 
 [![Adding wireless LANs into Netbox](https://img.youtube.com/vi/rewxPa58VCw/maxresdefault.jpg)](https://www.youtube.com/watch?v=rewxPa58VCw)
 

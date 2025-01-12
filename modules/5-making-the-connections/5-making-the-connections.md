@@ -57,7 +57,7 @@ These cables will connect 18 Access Switch Ethernet interfaces to the front port
 ## Video - Adding Cables and Connections into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Cables, Interface and Console connections, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/5-making-the-connections/csv_data) in the course Git Repository.
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/5-making-the-connections/csv_data) in the course GitHub repository.
 
 [![Adding cables and connections into Netbox](https://img.youtube.com/vi/FTjqGPS2oSo/maxresdefault.jpg)](https://www.youtube.com/watch?v=FTjqGPS2oSo)
 

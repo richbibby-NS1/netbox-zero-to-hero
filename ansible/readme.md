@@ -1,7 +1,7 @@
 ## Installing Ansible
 Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps to set up Ansible on your own system (they assume [Python](https://www.python.org/downloads/) and [Git](https://github.com/git-guides/install-git) are already installed and set up on Ansible host):
 
-1. Clone the NetBox Zero to Hero Git repository and change into the Ansible directory:
+1. Clone the NetBox Zero to Hero GitHub repository and change into the Ansible directory:
 
 ```
 git clone https://github.com/netbox-community/netbox-zero-to-hero.git

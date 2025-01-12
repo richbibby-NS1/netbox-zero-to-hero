@@ -94,7 +94,7 @@ The VMs are specified as follows:
 ## Video - Adding Virtualization Clusters and Virtual Machines
 OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the required physical servers for the VMware vSphere cluster, creating the cluster, through to adding the Virtual Machines and the application services.
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualization/csv_data) for the new devices and cables in the course Git Repository.
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualization/csv_data) for the new devices and cables in the course GitHub repository.
 
 [![Adding virtualization clusters and virtual machines](https://img.youtube.com/vi/D5iDdjZMUeo/maxresdefault.jpg)](https://www.youtube.com/watch?v=D5iDdjZMUeo)
 

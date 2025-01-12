@@ -18,7 +18,7 @@ OK, delete this example cable, by clicking. connections - cables, and then selec
 
 Great - OK so obviously adding a large number of cables in this way would be tedious and error prone, so click on the 'import' icon, and here is the bulk import screen and in the CSV field options you can see the required and optional fields for a successful import.
 
-Now this time Eric is going to upload a file rather than paste in the data. So here is the file to be used, and you will find this in the Git repository for this course (show file in Git Repo).
+Now this time Eric is going to upload a file rather than paste in the data. So here is the file to be used, and you will find this in the GitHub repository for this course (show file in Git Repo).
 
 There is the header for all the fields being and the data for each cable below it. For example, the first cable has the side A device which is the router, the type is an interface, and it is interface gigabit ethernet 0. On the B side, this cable is connecting to the switch interface ge-0/0/47 - the type is CAT6, the status is planned, the tenant is the consulting department, and this is a red cable that's half a metre long.
 

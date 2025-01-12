@@ -114,7 +114,7 @@ All of the device types that have been added to NetBox for the Brisbane project 
 ## Video - Adding The Facility Power Panels, Feeds and PDUs
 OK, so that's the planning work done - let's make this happen in NetBox!! This video will step you through the whole process from adding the power panels, feeds and PDUs, through to connecting the power cables to the network devices and servers.
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDU devices and the power cable connections in the course Git Repository.
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDU devices and the power cable connections in the course GitHub repository.
 
 [![Adding the facility power panels, feeds and PDUs](https://img.youtube.com/vi/Ky7UXDPTobA/maxresdefault.jpg)](https://www.youtube.com/watch?v=Ky7UXDPTobA)
 

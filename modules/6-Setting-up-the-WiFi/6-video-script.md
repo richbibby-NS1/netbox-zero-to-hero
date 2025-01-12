@@ -2,7 +2,7 @@ Hello and welcome to this video for module 6 of the NetBox Zero to Hero training
 
 For this demo I am using a NetBox Cloud instance. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you get set up with your own instance of NetBox along with a link to the notes that accompany this video module.
 
-In this video our network engineer Susan, will populate NetBox with the Wireless LAN data for the planned new Brisbane branch office. To do this Susan is going to use some simple python scripts. Again you will find links to all of these resources in the accompanying Git repository.
+In this video our network engineer Susan, will populate NetBox with the Wireless LAN data for the planned new Brisbane branch office. To do this Susan is going to use some simple python scripts. Again you will find links to all of these resources in the accompanying GitHub repository.
 
 OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the Wireless section of the home page. Susan has already followed the set up instructions for Python, and has activated a new new virtual environment. Please do check the instructions in the course notes if you need help with this initial set up of Python.
 
