@@ -26,7 +26,7 @@ To View this in the NetBox Web interface, just flip back and then click on Wirel
 
 Perfect. OK so the next task is to add the actual Wireless LAN's themselves. The script to do this is called, you guessed it - create_wlans.py. and is identical to the first script apart from 2 things - in line 20 the API end point is now /api/wireless/wireless-lans and the payload is a list containing the details for both of the new SSID's.
 
-Now you will have noticed also that the payload contains ID values for the group, the vlan and the tenant. Now on our demo you could easily find these values from the web interface - but you could also use python scripts to get these values. So to get the ID of the wireless lan group - there is another script called get_wlan_groups - which uses a GET request that you can see on line 30 to the wireless-lans-groups API end point using the brief format. So, running that returns the group and you can see the ID of 2.
+Now you will have noticed also that the payload contains ID values for the group, the vlan and the tenant. Now on our demo you could easily find these values from the web interface - but you could also use python scripts to get these values. So to get the ID of the wireless lan group - there is another script called get_wlan_groups - which uses a GET request that you can see on line 30 to the wireless-lans-groups API end point using the brief format. So, running that returns the group and you can see the ID of 1.
 
 To get the ID's of the vlans and the tenants, just run the get_vlans.py script which returns the list of vlans.
 
@@ -48,6 +48,6 @@ So, I hope that has been a useful overview of how add Wireless LAN data using so
 
 Interacting programmatically with the NetBox REST API using Python also opens up so many possibilities for using NetBox as your single source of truth for your network automation efforts going forward.
 
-If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data, or move the json data into a separate file and get your script to loop over it when it runs. It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the NetBox Learning Channel on the NetDev Community Slack and join in the discussion!
+If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data, or move the json data into a separate file and get your script to loop over it when it runs. It would be great to see how you develop your scripts and if you want to share this or just ask some questions then pop on over to the NetBox Learning Channel on the NetDev Community Slack and join in the discussion!
 
 So I hope you enjoyed that, and once again, thanks for watching!
