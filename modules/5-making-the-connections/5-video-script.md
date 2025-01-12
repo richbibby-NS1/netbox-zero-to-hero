@@ -10,9 +10,9 @@ Click on Devices and then select the WAN router and then click on Interfaces. To
 
 Notice that Either end of a cable may terminate to multiple objects of the same type. (click another interface) For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
 
-OK, then below this you define the cable - starting with the status (click planned) - and note that this is the only required field here - then the type of cable - you can select from various types of copper, fibre and power cables. so select CAT6 for this one.  select the tenancy......give it a label if you like, select a colour (red), the cable length for example 1 metre, and then select any tags you might have created.
+OK, then below this you define the cable - starting with the status (click planned) - and note that this is the only required field here - then the type of cable - you can select from various types of copper, fibre and power cables. so select CAT6 for this one.  give it a label if you like, select a colour (red), the cable length for example 1 metre, and then select any tags you might have created.
 
-Then simply click create. and now you can see the connection details here and you can also get a visual trace of the cable - which is fantastic when you need to troubleshoot a physical connection, you can instantly see from here what it should be. Once again, here NetBox as the Source Of Truth is defining what the *intent* of the network is.
+Lastly you can select the tenancy, and then simply click create. and now you can see the connection details here and you can also get a visual trace of the cable - which is fantastic when you need to troubleshoot a physical connection, you can instantly see from here what it should be. Once again, here NetBox as the Source Of Truth is defining what the *intent* of the network is.
 
 OK, delete this example cable, by clicking. connections - cables, and then select it and delete it.
 
@@ -24,9 +24,9 @@ There is the header for all the fields being and the data for each cable below i
 
 then the other cables are the console port connections, and then further down are the connections from the access switch ports to the front ports of the patch panel.
 
-so, back in the web interface, click on CSV File Upload, and then choose file, select the file 'Brisbane_Cables.csv'. click upload, and then click submit. And a couple of seconds later the import of all 23 cables is complete.
+so, back in the web interface, click on Upload File, and then choose file, select the file 'Brisbane_Cables.csv'. click open, and then click submit. And a couple of seconds later the import of all 23 cables is complete.
 
-Click 'view all' to see the full list of cables. Click on Interface Connections to view specifically the interfaces that are now connected. and click on Console connections to view those too.
+Then click on Interface Connections to view specifically the interfaces that are now connected. and click on Console connections to view those too.
 
 then click on an individual device, for example the switch, and look at the interfaces tab - as well as the first interface that is connected to the router, you have the interfaces from ge-0/0/10 down that connect to the patch panel. so click one of those cables to see the details, and the A and B ends are defined, and you can see it is a purple cat 6 cable that is 50cm long.
 
