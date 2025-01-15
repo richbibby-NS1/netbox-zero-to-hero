@@ -1,0 +1,79 @@
+no service pad
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec localtime show-timezone year
+service password-encryption
+service linenumber
+service compress-config
+service sequence-numbers
+no platform punt-keepalive disable-kernel-core
+!
+hostname {{ device.name }}
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+security authentication failure rate 5 log
+logging count
+no logging message-counter syslog
+logging userinfo
+logging buffered notifications
+!
+aaa new-model
+!
+!
+no ip bootp server
+{% for name_server in name_servers %}
+ip name-server {{ name_server }}
+{% endfor %}
+!
+spanning-tree extend system-id
+!
+redundancy
+ mode none
+!
+!
+lldp run
+!
+{% for intf in device.interfaces.all() %}
+interface {{ intf.name }}
+  {% if intf.description %}
+  description {{ intf.description }}
+  {% endif %}
+    {% for ip in intf.ip_addresses.all() %}
+      {% if ip.assigned_object.name == intf.name %}
+  ip address {{ ip.address.ip }} {{ ip.address.netmask }}
+      {% endif %}
+    {% endfor %}
+  no shutdown
+!
+{% endfor %}
+!
+snmp-server community {{ snmp_ro_community }} RO
+!
+logging source-interface GigabitEthernet0
+{% for syslog_server in syslog_servers  %}
+logging host {{ syslog_server }} transport udp port 1514
+{% endfor %}
+!
+line con 0
+ logging synchronous
+ stopbits 1
+line aux 0
+ stopbits 1
+!
+{% for ntp_server in ntp_servers %}
+ntp server {{ ntp_server }}
+{% endfor %}
+!
+end

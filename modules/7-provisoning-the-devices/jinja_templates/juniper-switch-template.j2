@@ -1,0 +1,108 @@
+system {
+    host-name {{ device.name }};
+    }
+    name-server {
+    {% for name_server in name_servers %}
+        {{ name_server }};
+    {% endfor %}
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        {% for syslog_server in syslog_servers %}
+        host {{ syslog_server }} {
+            any any;
+            daemon info;
+        }
+        {% endfor %}
+        file messages {
+            any notice;
+        }
+        file cli-commands {
+            interactive-commands any;
+            explicit-priority;
+        }
+        time-format millisecond;
+    }
+    ntp {
+      {% for ntp_server in ntp_servers %}
+          server {{ ntp_server }};
+      {% endfor %}
+    }
+}
+vlans {
+    {% for vlan in device.site.vlans.all() %}
+    {{ vlan.name }} {
+        vlan-id {{ vlan.vid }};
+        l3-interface vlan.{{ vlan.vid }};
+  }
+    {% endfor %}
+}
+interfaces {
+    ge-0/0/0 {
+          unit 0 {
+              family inet {
+                  address {{ device.primary_ip.address }};
+              }
+          }
+    }
+{% for intf in device.interfaces.all() %}
+{% if intf.untagged_vlan %}
+    {{ intf.name }} {
+        unit 0 {
+            family ethernet-switching {
+                port-mode access;
+                vlan {
+                    members {{ intf.untagged_vlan.name }};
+                }
+            }
+        }
+    }
+{% elif intf.mode %}
+    {{ intf.name }} {
+        unit 0 {
+            family ethernet-switching {
+                port-mode trunk;
+                vlan {
+                    members all;
+                }
+            }
+        }
+    }
+{% endif %}
+{% endfor %}
+{%- for intf in device.interfaces.all() %}
+  {%- for ip in intf.ip_addresses.all() %}
+    {%- if ip.assigned_object.name == intf.name and 'me' in intf.name %}
+    {{ intf.name }} {
+        unit 0 {
+            family inet {
+                address {{ ip.address }};
+            }
+        }
+    }
+      {%- endif %}
+    {%- endfor %}
+{%- endfor %}
+{%- for intf in device.interfaces.all() %}
+{% if 'vlan' in intf.name %}
+    vlan {
+    {% for ip in intf.ip_addresses.all() %}
+      {%- if ip.assigned_object.name == intf.name %}
+        unit {{ intf.name.split('.')[1] }}  {
+            family inet {
+                address {{ ip.address }};
+            }
+        }
+    }
+      {%- endif %}
+    {% endfor %}
+{% endif %}
+{%- endfor %}
+}
+snmp {
+    community {{ snmp_ro_community }} {
+        authorization read-only;
+        }
+}

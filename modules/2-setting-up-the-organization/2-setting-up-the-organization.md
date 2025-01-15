@@ -15,7 +15,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
-The NetBox version used in the video for this module is `v4.1.8`.
+The NetBox version used in the video for this module is `v4.1.11`.
 
 ## The Organizational Data
 Our fictional organization is structured as follows:
