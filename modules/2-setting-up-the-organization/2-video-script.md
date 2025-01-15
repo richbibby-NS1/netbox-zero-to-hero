@@ -133,10 +133,9 @@ Next, to create the Rack Roles, expand Racks and click the plus sign next to Rac
 
 OK so the new Comms Room location at the Brisbane site has a single rack that is used for mixed IT infrastructure - so click the 'infrastucture' rack role and then click 'add rack. The site is Brisbane, the location is the 'comms room', give it the name of 'AUBRI01-RK-01', status is 'planned' again, the role is already set to 'infrastructure'.
 
-Now at this is branch office site the requirement is only for a half height rack so we will will select that for the rack type, the tenant group is 'Departments', and the tenant is 'Consulting', then click create. So there is the new rack for Brisbane all set up.
+Now at this is branch office site the requirement is only for a half height rack so we will will select VR 24U rack type, the tenant group is 'Departments', and the tenant is 'Consulting', then click create. So there is the new rack for Brisbane all set up.
 
-**NEEDS 4.1.8**
-Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,rack_type??:
+Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role and rack_type:
 
 **netbox_racks.csv**
 
