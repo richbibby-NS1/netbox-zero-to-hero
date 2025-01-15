@@ -1,8 +1,8 @@
-# Module 7- Automate All The Things!
+# Module 7- Provisioning the Devices
 
 # Introduction
 
-Hello and welcome to module 7 of the NetBox 'Zero-to-Hero' course. In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), Susan added the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API. In this Module, Eric will use the Provisioning feature of NetBox to automate the automate the generation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
+Hello and welcome to module 7 of the NetBox 'Zero-to-Hero' course. In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), Susan added the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API. In this Module, Eric will use the Provisioning feature of NetBox to automate the generation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
 
 By the end of this module you will be able to:
 - Understand the basics of how Jinja templates work
@@ -16,7 +16,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are:
-- `NetBox v4.1.6`
+- `NetBox v4.1.11`
 - `Python v3.12.5`
 - `ansible-core v2.13.4`
 - `ansible package v6.4.0`

@@ -22,7 +22,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
-The NetBox version used in the video for this module is `v4.1.6`, and the following course materials used in the demo are available:
+The NetBox version used in the video for this module is `v4.1.11`, and the following course materials used in the demo are available:
 - [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making API calls
 - [YAML files](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/3-adding-the-kit/yaml_data) used for device types
 

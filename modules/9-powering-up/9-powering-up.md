@@ -19,7 +19,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are:
-- `NetBox `v4.1.6``
+- `NetBox `v4.1.11``
 
 ## Power Tracking In NetBox
 
